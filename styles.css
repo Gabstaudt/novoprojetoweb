@@ -1,0 +1,375 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #0A0A0A;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Navegação */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #1C1C1C;
+  }
+  
+  .logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    color: #0ABAB5;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    color: #A8A9AD;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #0ABAB5;
+  }
+  
+  /* Banner Principal */
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+  }
+  
+  .central-image {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+  }
+  
+  .main-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+/* Estilo da seção título */
+.section-title {
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Margem para cima e para baixo */
+}
+
+.line-container {
+    display: flex; /* Alinha os elementos em linha */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    width: 100%; /* Garante que a linha ocupe toda a largura */
+}
+
+.neon-line {
+    flex-grow: 1; /* Faz a linha ocupar todo o espaço disponível */
+    height: 2px; /* Altura da linha (fina) */
+    background-color: #0ABAB5; /* Cor da linha */
+    margin: 0 10px; /* Margem lateral para espaçamento */
+    box-shadow: 0 0 5px #0ABAB5, 0 0 10px #0ABAB5, 0 0 15px #39FF14, 0 0 20px #39FF14; /* Efeito de brilho neon */
+}
+
+.line-container h2 {
+    font-size: 24px; /* Tamanho da fonte */
+    color: #FFFFFF; /* Cor do texto */
+    white-space: nowrap; /* Impede quebra de linha */
+    margin: 0; /* Remove margens padrão */
+    padding: 0 10px; /* Espaço ao redor do texto */
+}
+
+
+
+
+
+  
+  .product-card-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .product-card-overlay .card {
+    width: 120px;
+    height: 160px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  
+  .product-card-overlay img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .sidebar {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Botões de ação */
+  .filled-button, .outline-button {
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .filled-button {
+    background-color: #0ABAB5;
+    color: #0A0A0A;
+    border: none;
+  }
+  
+  .outline-button {
+    background-color: transparent;
+    color: #0ABAB5;
+    border: 2px solid #0ABAB5;
+  }
+  
+  /* Produtos (Carrossel) */
+  .products {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .product-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: hidden;
+    padding: 20px 0;
+    flex: 1; /* Permite que o carrossel utilize o espaço restante */
+  }
+  
+  .product-card {
+    min-width: 150px;
+    background-color: #1C1C1C;
+    border: 2px solid #0ABAB5;
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .product-card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .product-card h3 {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .product-card p {
+    font-size: 14px;
+    color: #A8A9AD;
+  }
+  
+  .preco {
+    font-weight: bold;
+    color: #0ABAB5;
+  }
+  
+  /* Estilo dos Botões Comprar */
+  .carousel-button {
+    background-color: #0ABAB5; /* Cor de fundo */
+    color: #0A0A0A; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 25px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
+  }
+  
+  .carousel-button:hover {
+    background-color: #39FF14; /* Cor de fundo ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de levitar ao passar o mouse */
+  }
+  
+  .carousel-button:active {
+    transform: translateY(1px); /* Efeito de pressionar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reduzida ao pressionar */
+  }
+  
+  /* Setas do Carrossel */
+  .carousel-button.left, .carousel-button.right {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #0ABAB5; /* Cor do texto */
+    background: transparent;
+    border: 2px solid #0ABAB5; /* Borda azul neon */
+    border-radius: 50%; /* Bordas arredondadas */
+    width: 40px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves */
+  }
+  
+  .carousel-button.left {
+    left: 10px;
+  }
+  
+  .carousel-button.right {
+    right: 10px;
+  }
+  
+  .carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Efeito ao passar o mouse */
+    color: #FFFFFF; /* Muda a cor do texto ao passar o mouse */
+  }
+  
+  /* Sidebar do Carrinho */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1;
+}
+
+.cart-sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #1C1C1C;
+    color: #FFFFFF;
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.cart-sidebar.active {
+    transform: translateX(0);
+}
+
+.cart-overlay.active {
+    display: block;
+}
+
+.close-cart {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Itens do Carrinho */
+.cart-items {
+    margin-top: 60px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    padding: 10px;
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.cart-item img {
+    width: 50px; /* Imagem menor */
+    height: 50px; /* Imagem menor */
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.item-info {
+    flex-grow: 1; /* Faz com que o espaço do item cresça */
+}
+
+/* Estilo do Campo de Quantidade */
+.cart-item input {
+    width: 50px; /* Largura do input */
+    height: 30px; /* Altura do input */
+    border: 2px solid #0ABAB5; /* Borda azul neon */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+    background-color: #1C1C1C; /* Fundo do input */
+    color: #FFFFFF; /* Cor do texto */
+    margin-left: 10px; /* Espaço à esquerda do input */
+}
+
+.cart-item input:focus {
+    outline: none; /* Remove o contorno */
+    border-color: #00eeff; /* Muda a borda ao focar */
+}
+
+/* Estilo do Botão de Finalizar Compra */
+.checkout-button {
+    background-color: #0ABAB5; /* Cor de fundo */
+    color: #0A0A0A; /* Cor do texto */
+    border: none;
+    padding: 12px; /* Ajusta o padding */
+    width: 100%;
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer;
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
+}
+
+.checkout-button:hover {
+    background-color: #7aebff; /* Cor ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de levitar ao passar o mouse */
+}
+
+.checkout-button:active {
+    transform: translateY(1px); /* Efeito de pressionar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reduzida ao pressionar */
+}
