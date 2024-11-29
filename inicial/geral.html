@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboStart - Futurista</title>
+    <link rel="stylesheet" href="geral.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Barra de Navegação -->
+  <header>
+    <nav>
+      <div class="logo">RoboStart</div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li>
+            <a href="#produtos">Produtos</a>
+            <ul class="dropdown">
+                <li><a href="geral.html">Geral</a></li>
+                <li><a href="#infantil">Infantil</a></li>
+                <li><a href="#automacao">Automação</a></li>
+                <li><a href="#modernos">Modernos</a></li>
+            </ul>
+        </li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#carrinho" id="cart-button">Carrinho</a></li>
+      </ul>
+    </nav>
+    <div class="section-title">
+        <div class="line-container">
+            <div class="neon-line"></div>
+            <h2>Todos os Produtos</h2>
+            <div class="neon-line"></div>
+        </div>
+    </div>
+</header>
+
+<!-- Banner Superior -->
+<!-- Seção de Imagem Superior -->
+<section class="top-image-section">
+    <div class="top-image-content">
+        <img src="./imagens/edit.png" alt="Imagem Lateral" class="top-image">
+    </div>
+</section>
+
+
+<main>
+    <section class="products">
+        <div class="product-card">
+            <img src="../image/produtos/drone.png" alt="Drone">
+            <h3>Kit de Drone Programável</h3>
+            <p>Kit educacional DIY de drone para o BBC micro:bit que você constrói, codifica e depois voa.</p>
+            <div class="preco">Preço: R$300,00</div>
+            <button class="carousel-button" onclick="addToCart('Kit de Drone Programável', 300, 'drone.png')">Adicionar ao Carrinho 🛒</button>
+        </div>
+
+        <div class="product-card">
+            <img src="../image/produtos/carrinho.png" alt="Carrinho">
+            <h3>Kit Carrinho</h3>
+            <p>Construa e programe seu próprio carrinho robô com este kit.</p>
+            <div class="preco">Preço: R$250,00</div>
+            <button class="carousel-button" onclick="addToCart('Kit Carrinho', 250, 'carrinho.png')">Adicionar ao Carrinho 🛒</button>
+        </div>
+
+        <div class="product-card">
+            <img src="../image/produtos/robo.png" alt="Robô">
+            <h3>Kit Robô</h3>
+            <p>Aprenda a programar um robô com este kit educativo.</p>
+            <div class="preco">Preço: R$350,00</div>
+            <button class="carousel-button" onclick="addToCart('Kit Robô', 350, 'robo.png')">Adicionar ao Carrinho 🛒</button>
+        </div>
+        <div class="product-card">
+            <img src="../image/produtos/aranha.png" alt="Aranha">
+            <h3>Kit Aranha</h3>
+            <p>Monte e programe sua própria aranha robô.</p>
+            <div class="preco">Preço: R$150,00</div>
+            <button class="carousel-button" onclick="addToCart('Kit Aranha', 150, 'aranha.png')">Adicionar ao Carrinho 🛒</button>
+        </div>
+
+        <div class="product-card">
+            <img src="../image/produtos/braco.png" alt="Braço Robótico">
+            <h3>Kit Braço Robótico</h3>
+            <p>Construa um braço robótico programável.</p>
+            <div class="preco">Preço: R$400,00</div>
+            <button class="carousel-button" onclick="addToCart('Kit Braço Robótico', 400, '../image/produtos/braco.png')">Adicionar ao Carrinho 🛒</button>
+        </div>
+
+    </section>
+</main>
+
+<!-- Sidebar do Carrinho -->
+<div class="cart-overlay" id="cart-overlay"></div>
+<div class="cart-sidebar" id="cart-sidebar">
+    <button class="close-cart" id="close-cart">X</button>
+    <h2>Carrinho de Compras</h2>
+    <div id="cart-items"></div>
+    <div>Total: R$<span id="total-value">0.00</span></div>
+    <button id="checkout-btn">Finalizar Compra</button>
+</div>
+
+<footer>
+    <p>&copy; 2024 RoboStart. Todos os direitos reservados.</p>
+</footer>
+
+<script src="geral.js"></script> <!-- Link para o JavaScript -->
+</body>
+</html>

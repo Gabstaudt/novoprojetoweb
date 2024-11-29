@@ -14,12 +14,25 @@
       <div class="logo">RoboStart</div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#produtos">Produtos</a></li>
+        <li>
+            <a href="#produtos">Produtos</a>
+            <ul class="dropdown">
+                <li><a href="./inicial/geral.html">Geral</a></li>
+                <li><a href="#infantil">Infantil</a></li>
+                <li><a href="#automacao">Automação</a></li>
+                <li><a href="#modernos">Modernos</a></li>
+            </ul>
+        </li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#carrinho" id="cart-button">Carrinho</a></li>
-      </ul>
-    </nav>
-  </header>
+    </ul>
+</nav>
+<div class="section-title">
+    <div class="line-container">
+        <h2>Home</h2>
+    </div>
+</div>
+</header>
 
   <!-- Seção Principal -->
   <main>
@@ -73,7 +86,7 @@
             <h3>Kit Carrinho</h3>
             <p>Construa e programe seu próprio carrinho robô com este kit.</p>
             <div class="preco">Preço: R$250,00</div>
-            <button class="carousel-button" onclick="addToCart('Kit Carrinho', 250)">Adicionar ao Carrinho 🛒</button>
+            <button class="carousel-button" onclick="addToCart('Kit Carrinho', 250, 'carrinho.png')">Adicionar ao Carrinho 🛒</button>
             <div class="avaliacao">★★★★☆</div>
           </div>
           <div class="product-card">
@@ -81,7 +94,7 @@
             <h3>Kit Robô</h3>
             <p>Aprenda a programar um robô com este kit educativo.</p>
             <div class="preco">Preço: R$350,00</div>
-            <button class="carousel-button" onclick="addToCart('Kit Robô', 350)">Adicionar ao Carrinho 🛒</button>
+            <button class="carousel-button" onclick="addToCart('Kit Robô', 350, 'robo.png')">Adicionar ao Carrinho 🛒</button>
             <div class="avaliacao">★★★★★</div>
           </div>
           <div class="product-card">
@@ -89,7 +102,7 @@
             <h3>Kit Aranha</h3>
             <p>Monte e programe sua própria aranha robô.</p>
             <div class="preco">Preço: R$150,00</div>
-            <button class="carousel-button" onclick="addToCart('Kit Aranha', 150)">Adicionar ao Carrinho 🛒</button>
+            <button class="carousel-button" onclick="addToCart('Kit Aranha', 150, 'aranha.png')">Adicionar ao Carrinho 🛒</button>
             <div class="avaliacao">★★★★☆</div>
           </div>
           <div class="product-card">
@@ -97,7 +110,7 @@
             <h3>Kit Braço Robótico</h3>
             <p>Construa um braço robótico programável.</p>
             <div class="preco">Preço: R$400,00</div>
-            <button class="carousel-button" onclick="addToCart('Kit Braço Robótico', 400)">Adicionar ao Carrinho 🛒</button>
+            <button class="carousel-button" onclick="addToCart('Kit Braço Robótico', 400, 'braco.png')">Adicionar ao Carrinho 🛒</button>
             <div class="avaliacao">★★★★★</div>
           </div>
 
@@ -106,7 +119,7 @@
             <h3>Kit Braço Robótico</h3>
             <p>Construa um braço robótico programável.</p>
             <div class="preco">Preço: R$400,00</div>
-            <button class="carousel-button" onclick="addToCart('Kit Braço Robótico', 400)">Adicionar ao Carrinho 🛒</button>
+            <button class="carousel-button" onclick="addToCart('Kit Braço Robótico', 400, 'braco.png')">Adicionar ao Carrinho 🛒</button>
             <div class="avaliacao">★★★★★</div>
           </div>
 

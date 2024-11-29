@@ -81,26 +81,47 @@
     width: 100%; /* Garante que a linha ocupe toda a largura */
 }
 
-.neon-line {
-    flex-grow: 1; /* Faz a linha ocupar todo o espaço disponível */
-    height: 2px; /* Altura da linha (fina) */
-    background-color: #0ABAB5; /* Cor da linha */
-    margin: 0 10px; /* Margem lateral para espaçamento */
-    box-shadow: 0 0 5px #0ABAB5, 0 0 10px #0ABAB5, 0 0 15px #39FF14, 0 0 20px #39FF14; /* Efeito de brilho neon */
+
+
+/* Estilo do Dropdown */
+.nav-links li {
+  position: relative; /* Para posicionar o dropdown */
 }
 
-.line-container h2 {
-    font-size: 24px; /* Tamanho da fonte */
-    color: #FFFFFF; /* Cor do texto */
-    white-space: nowrap; /* Impede quebra de linha */
-    margin: 0; /* Remove margens padrão */
-    padding: 0 10px; /* Espaço ao redor do texto */
+.dropdown {
+  display: none; /* Esconde o dropdown por padrão */
+  position: absolute; /* Posiciona em relação ao item pai */
+  top: 100%; /* Faz o dropdown aparecer abaixo do item */
+  left: 0; /* Alinha à esquerda do item pai */
+  background-color: #1C1C1C; /* Cor de fundo do dropdown */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  z-index: 1; /* Garante que o dropdown fique acima de outros elementos */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 10px 0; /* Espaçamento interno */
+}
+
+.nav-links li:hover .dropdown {
+  display: block; /* Exibe o dropdown ao passar o mouse */
+}
+
+.dropdown li {
+  padding: 10px 20px; /* Espaçamento interno dos itens do dropdown */
+}
+
+.dropdown li a {
+  color: #A8A9AD; /* Cor do texto padrão */
+  text-decoration: none; /* Remove sublinhado */
+  display: block; /* Faz com que o link ocupe a largura total */
+  transition: background-color 0.3s, color 0.3s; /* Transição suave para a cor de fundo e texto */
+}
+
+.dropdown li a:hover {
+  background-color: transparent; /* Mantém o fundo transparente */
+  color: #0ABAB5; /* Cor do texto ao passar o mouse */
 }
 
 
-
-
-
+/* ssssssssssssssssssssssssssssssssssssss */
   
   .product-card-overlay {
     position: absolute;

@@ -1,0 +1,332 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    background-color: #0A0A0A;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navegação */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #1C1C1C;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    color: #0ABAB5;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #A8A9AD;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0ABAB5;
+}
+
+
+/* Seção de Imagem Superior */
+/* Seção de Imagem Superior */
+.top-image-section {
+    height: 4cm; /* Altura da seção */
+    background: linear-gradient(to right, #0ABAB5,#0abab444, #000000a7); /* Gradiente do escuro para o claro */
+    display: flex; /* Usar flexbox para alinhar o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 0 20px; /* Espaçamento lateral */
+}
+
+.top-image-content {
+    display: flex; /* Flexbox para conteúdo */
+    justify-content: flex-end; /* Alinha a imagem à direita */
+    width: 100%; /* Ocupa toda a largura disponível */
+}
+
+.top-image {
+    width: auto; /* Largura automática */
+    height: 80%; /* Define uma altura proporcional */
+    max-height: 3.2cm; /* Ajusta para que não exceda o tamanho da seção */
+}
+
+
+
+
+/* Estilo da seção título */
+.section-title {
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Margem para cima e para baixo */
+}
+
+.line-container {
+    display: flex; /* Alinha os elementos em linha */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    width: 100%; /* Garante que a linha ocupe toda a largura */
+}
+
+.neon-line {
+    flex-grow: 1; /* Faz a linha ocupar todo o espaço disponível */
+    height: 2px; /* Altura da linha (fina) */
+    background-color: #0ABAB5; /* Cor da linha */
+    margin: 0 10px; /* Margem lateral para espaçamento */
+    box-shadow: 0 0 5px #0ABAB5, 0 0 10px #0ABAB5, 0 0 15px #39FF14, 0 0 20px #39FF14; /* Efeito de brilho neon */
+}
+
+.line-container h2 {
+    font-size: 24px; /* Tamanho da fonte */
+    color: #FFFFFF; /* Cor do texto */
+    white-space: nowrap; /* Impede quebra de linha */
+    margin: 0; /* Remove margens padrão */
+    padding: 0 10px; /* Espaço ao redor do texto */
+}
+
+/* Estilo da seção de produtos */
+.products {
+    display: flex; /* Usar flexbox para layout */
+    flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha */
+    justify-content: center; /* Centraliza os cards */
+    padding: 20px; /* Espaçamento em torno dos produtos */
+}
+
+.product-card {
+    background-color: #1C1C1C; /* Cor de fundo dos cards */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    margin: 15px; /* Margem entre os cards */
+    text-align: center; /* Centraliza o texto */
+    width: 200px; /* Largura do card */
+    transition: transform 0.3s; /* Transição suave para o efeito de hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Efeito de levitar ao passar o mouse */
+}
+
+.product-card img {
+    width: 100%; /* A imagem ocupa toda a largura do card */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Bordas arredondadas para a imagem */
+}
+
+.product-card h3 {
+    color: #FFFFFF; /* Cor do título */
+    font-size: 16px; /* Tamanho da fonte do título */
+    margin-bottom: 10px; /* Margem inferior */
+}
+
+.product-card p {
+    font-size: 14px; /* Tamanho da fonte da descrição */
+    color: #A8A9AD; /* Cor da descrição */
+}
+
+.preco {
+    font-weight: bold; /* Negrito */
+    color: #0ABAB5; /* Cor do preço */
+    margin: 10px 0; /* Margem em cima e embaixo */
+}
+
+/* Estilo dos Botões Adicionar ao Carrinho */
+.carousel-button {
+    background-color: #0ABAB5; /* Cor de fundo */
+    color: #0A0A0A; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 25px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
+}
+
+.carousel-button:hover {
+    background-color: #39FF14; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilo do Dropdown */
+.nav-links li {
+    position: relative; /* Para posicionar o dropdown */
+}
+
+.dropdown {
+    display: none; /* Esconde o dropdown por padrão */
+    position: absolute; /* Posiciona em relação ao item pai */
+    top: 100%; /* Faz o dropdown aparecer abaixo do item */
+    left: 0; /* Alinha à esquerda do item pai */
+    background-color: #1C1C1C; /* Cor de fundo do dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    z-index: 1; /* Garante que o dropdown fique acima de outros elementos */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 0; /* Espaçamento interno */
+}
+
+.nav-links li:hover .dropdown {
+    display: block; /* Exibe o dropdown ao passar o mouse */
+}
+
+.dropdown li {
+    padding: 10px 20px; /* Espaçamento interno dos itens do dropdown */
+}
+
+.dropdown li a {
+    color: #A8A9AD; /* Cor do texto padrão */
+    text-decoration: none; /* Remove sublinhado */
+    display: block; /* Faz com que o link ocupe a largura total */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para a cor de fundo e texto */
+}
+
+.dropdown li a:hover {
+    background-color: transparent; /* Mantém o fundo transparente */
+    color: #0ABAB5; /* Cor do texto ao passar o mouse */
+}
+ /* sidebar carrinho */
+
+ /* Estilo da Sidebar do Carrinho */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Inicialmente escondido */
+    z-index: 10; /* Colocado acima do conteúdo */
+}
+
+.cart-sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #1C1C1C; /* Cor do fundo */
+    color: #FFFFFF; /* Cor do texto */
+    padding: 20px;
+    transform: translateX(100%); /* Inicialmente fora da tela */
+    transition: transform 0.3s ease-in-out; /* Animação */
+    z-index: 11; /* Acima da overlay */
+}
+
+.cart-sidebar.active {
+    transform: translateX(0); /* Move para dentro da tela */
+}
+
+.cart-items {
+    margin-top: 20px; /* Espaçamento acima da lista de itens */
+}
+
+.close-cart {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#checkout-btn {
+    background-color: #0ABAB5; /* Cor do botão */
+    color: #0A0A0A; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    padding: 10px; /* Espaçamento interno */
+    width: 100%; /* O botão ocupa a largura total do carrinho */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão */
+    transition: background-color 0.3s; /* Transição suave */
+    margin-top: 10px; /* Margem acima do botão */
+}
+
+#checkout-btn:hover {
+    background-color: #39FF14; /* Cor do botão ao passar o mouse */
+}
+
+/* Itens do Carrinho */
+.cart-items {
+    margin-top: 60px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    padding: 10px;
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.cart-item img {
+    width: 50px; /* Imagem menor */
+    height: 50px; /* Imagem menor */
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.item-info {
+    flex-grow: 1; /* Faz com que o espaço do item cresça */
+}
+
+/* Estilo do Campo de Quantidade */
+.cart-item input {
+    width: 50px; /* Largura do input */
+    height: 30px; /* Altura do input */
+    border: 2px solid #0ABAB5; /* Borda azul neon */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+    background-color: #1C1C1C; /* Fundo do input */
+    color: #FFFFFF; /* Cor do texto */
+    margin-left: 10px; /* Espaço à esquerda do input */
+}
+
+.cart-item input:focus {
+    outline: none; /* Remove o contorno */
+    border-color: #00eeff; /* Muda a borda ao focar */
+}
+
+/* Estilo do Botão de Finalizar Compra */
+.checkout-button {
+    background-color: #0ABAB5; /* Cor de fundo */
+    color: #0A0A0A; /* Cor do texto */
+    border: none;
+    padding: 12px; /* Ajusta o padding */
+    width: 100%;
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer;
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
+}
+
+.checkout-button:hover {
+    background-color: #7aebff; /* Cor ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de levitar ao passar o mouse */
+}
+
+.checkout-button:active {
+    transform: translateY(1px); /* Efeito de pressionar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reduzida ao pressionar */
+}

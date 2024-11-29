@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra - RoboStart</title>
+    <link rel="stylesheet" href="carrinho.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Barra de Navegação -->
+  <header>
+    <nav>
+      <div class="logo">RoboStart</div>
+      <button id="back-button">Voltar</button>
+      <div class="section-title">
+        <div class="line-container">
+            <div class="neon-line"></div>
+            <h2>Finalizar Compra</h2>
+            <div class="neon-line"></div>
+        </div>
+    </div>
+    <button id="finalize-button" class="action-button hidden">Finalizar Compra</button> <!-- Botão oculto inicialmente -->
+</nav>
+</header>
+
+<main>
+    <div class="form-container"> <!-- Contêiner para centralizar os formulários -->
+        <section class="cart-items" id="cart-items">
+            <!-- Itens do carrinho serão exibidos aqui -->
+        </section>
+        <div class="total-container">
+            Total: R$<span id="total-value">0.00</span>
+        </div>
+
+        <!-- Opções de Pagamento -->
+        <h3>Forma de Pagamento</h3>
+        <div>
+            <label>
+                <input type="radio" name="payment-method" value="pix"> Pix
+            </label>
+            <label>
+                <input type="radio" name="payment-method" value="boleto"> Boleto
+            </label>
+            <label>
+                <input type="radio" name="payment-method" value="cartao"> Cartão de Crédito
+            </label>
+        </div>
+
+        <!-- Formulário do Cartão de Crédito -->
+        <div id="credit-card-form" class="hidden">
+            <h4>Dados do Cartão</h4>
+            <form id="payment-form">
+                <label for="card-number">Número do Cartão:</label>
+                <input type="text" id="card-number" required>
+                <label for="card-name">Nome no Cartão:</label>
+                <input type="text" id="card-name" required>
+                <label for="expiry-date">Data de Validade:</label>
+                <input type="text" id="expiry-date" placeholder="MM/AA" required>
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" required>
+                <label for="installments">Número de Parcelas:</label>
+                <select id="installments" required>
+                    <option value="">Selecione</option>
+                    <option value="1">1x</option>
+                    <option value="2">2x</option>
+                    <option value="3">3x</option>
+                    <option value="4">4x</option>
+                    <option value="5">5x</option>
+                    <option value="6">6x</option>
+                </select>
+            </form>
+        </div>
+
+        <!-- Botão para abrir o modal de cadastro -->
+        <button id="register-trigger" class="action-button">Cadastre-se aqui</button>
+    </div>
+
+    <button id="finalize-button" class="action-button hidden">Finalizar Compra</button> <!-- Botão oculto inicialmente -->
+</main>
+
+<!-- Modal de Cadastro -->
+<div id="register-modal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Cadastro</h3>
+        <form id="signup-form">
+            <label for="full-name">Nome Completo:</label>
+            <input type="text" id="full-name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="phone">Telefone:</label>
+            <input type="text" id="phone" required>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" required>
+            <label for="confirm-password">Confirmação de Senha:</label>
+            <input type="password" id="confirm-password" required>
+            <p>Já possui login? <button type="button" id="login-trigger">Clique aqui</button></p> <!-- Botão para abrir modal de login -->
+            <button type="submit" id="register-button">Cadastrar</button>
+        </form>
+    </div>
+</div>
+
+<!-- Modal de Login -->
+<div id="login-modal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Login</h3>
+        <form id="login-form">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" required>
+            <label for="password">Senha:</label>
+            <input type="password" id="login-password" required>
+            <button type="submit" id="login-button">Entrar</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 RoboStart. Todos os direitos reservados.</p>
+</footer>
+
+<!-- <script src="carrinho.js"></script>  -->
+<script src="funcao.js"></script> 
+
+</body>
+</html>

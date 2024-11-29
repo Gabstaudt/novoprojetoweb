@@ -1,0 +1,247 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Faz com que o padding e a borda não afetem a largura total */
+}
+
+/* Estilo do corpo */
+body {
+    background-color: #0A0A0A; /* Cor de fundo */
+    color: #FFFFFF; /* Cor do texto */
+    font-family: 'Poppins', sans-serif; /* Fonte padrão */
+}
+
+/* Estilo da Barra de Navegação */
+header {
+    display: flex;
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: center; /* Alinha os itens no centro */
+    padding: 20px 40px; /* Espaçamento interno */
+    background-color: #1C1C1C; /* Cor de fundo da barra */
+}
+
+/* Estilo da Logo */
+.logo {
+    font-family: 'Orbitron', sans-serif; /* Fonte da logo */
+    font-size: 24px; /* Tamanho da fonte */
+    color: #0ABAB5; /* Cor da logo */
+}
+
+/* Estilo da seção título */
+.section-title {
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Margem para cima e para baixo */
+}
+
+/* Estilo do botão Voltar */
+#back-button {
+    background-color: transparent; /* Fundo transparente */
+    border: 1px solid #0ABAB5; /* Borda azul neon */
+    color: #0ABAB5; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 25px; /* Bordas arredondadas em formato de pílula */
+    cursor: pointer; /* Cursor em forma de mão */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+/* Efeito ao passar o mouse no botão Voltar */
+#back-button:hover {
+    background-color: #0ABAB5; /* Cor de fundo ao passar o mouse */
+    color: #0A0A0A; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo do botão de ação (Cadastre-se aqui e Finalizar Compra) */
+.action-button {
+    background-color: #0ABAB5; /* Cor do botão */
+    color: #0A0A0A; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Diminuído o tamanho do botão de cadastro */
+    border-radius: 25px; /* Bordas arredondadas em formato de pílula */
+    cursor: pointer; /* Cursor em forma de mão */
+    transition: background-color 0.3s; /* Transição suave */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    margin: 10px 0; /* Margem acima e abaixo */
+}
+
+/* Efeito ao passar o mouse nos botões de ação */
+.action-button:hover {
+    background-color: #39FF14; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilo do contêiner principal do formulário */
+.form-container {
+    display: flex;
+    flex-direction: column; /* Direção dos itens */
+    align-items: center; /* Centraliza os itens */
+    margin: 20px auto; /* Margem para centralizar */
+    width: 50%; /* Largura ajustável */
+}
+
+/* Estilo do carrinho */
+.cart-items {
+    display: flex; /* Flexbox para organizar os itens */
+    flex-direction: column; /* Direção dos itens */
+    align-items: center; /* Centraliza os itens */
+    padding: 20px; /* Espaçamento em torno dos itens */
+}
+
+.cart-item {
+    display: flex; /* Usar flexbox para cada item */
+    align-items: center; /* Alinha verticalmente */
+    margin-bottom: 15px; /* Espaçamento entre os itens */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    width: 80%; /* Largura do item */
+}
+
+.cart-item img {
+    width: 50px; /* Tamanho da imagem */
+    height: 50px; /* Tamanho da imagem */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-right: 10px; /* Margem à direita */
+}
+
+.item-info {
+    flex-grow: 1; /* Faz com que o espaço do item cresça */
+}
+
+/* Estilo do modal de cadastro e login */
+.modal {
+    display: none; /* Oculta o modal */
+    position: fixed; /* Fica fixo na tela */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Ocupa toda a tela */
+    height: 100%; /* Ocupa toda a altura da tela */
+    background: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    justify-content: center; /* Centraliza o modal */
+    align-items: center; /* Centraliza o modal */
+}
+
+/* Estilo do conteúdo do modal */
+.modal-content {
+    background-color: #1C1C1C; /* Cor de fundo do modal */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 25px; /* Bordas arredondadas em formato de pílula */
+    width: 80%; /* Largura do modal */
+    max-width: 400px; /* Largura máxima */
+}
+
+/* Estilo do botão de fechar */
+.close {
+    color: #FFFFFF; /* Cor do botão de fechar */
+    float: right; /* Alinha à direita */
+    font-size: 24px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor em forma de mão */
+}
+
+.close:hover {
+    color: #0ABAB5; /* Cor ao passar o mouse */
+}
+
+/* Mostra o modal */
+.modal.show {
+    display: flex; /* Exibe o modal */
+}
+
+/* Ocultar elementos com a classe 'hidden' */
+.hidden {
+    display: none; /* Oculta elementos */
+}
+
+/* Estilo do botão de finalizar compra */
+#finalize-button {
+    position: fixed; /* Fica fixo na tela */
+    bottom: 20px; /* Distância do fundo */
+    right: 20px; /* Distância da direita */
+    background-color: #0ABAB5; /* Cor do botão */
+    color: #0A0A0A; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    padding: 15px 30px; /* Espaçamento interno */
+    border-radius: 25px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão */
+    transition: background-color 0.3s; /* Transição suave */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    display: none; /* Inicialmente oculto, será mostrado ao exibir itens no carrinho */
+}
+
+/* Estilo dos inputs e selects nos modais */
+input,
+select {
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 15px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Margem abaixo */
+    border-radius: 25px; /* Formato de pílula */
+    border: 1px solid #A8A9AD; /* Borda padrão */
+    background-color: #1C1C1C; /* Fundo do input */
+    color: #FFFFFF; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Efeito ao focar nos inputs e selects */
+input:focus, select:focus {
+    border-color: #0ABAB5; /* Cor da borda ao focar */
+}
+
+/* Estilo do botão de entrar no modal de login */
+#login-button {
+    background-color: #0ABAB5; /* Cor do botão */
+    color: #0A0A0A; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    padding: 15px 30px; /* Espaçamento interno */
+    border-radius: 25px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão */
+    transition: background-color 0.3s; /* Transição suave */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+}
+
+/* Estilo do contêiner do formulário de cadastro */
+.registration-form {
+    display: flex;
+    flex-direction: column; /* Direção dos itens */
+    align-items: center; /* Centraliza os itens */
+    margin-top: 20px; /* Margem acima do formulário */
+}
+
+/* Estilo do botão de cadastrar */
+#register-button {
+    background-color: #0ABAB5; /* Cor do botão */
+    color: #0A0A0A; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Diminuído o tamanho do botão de cadastro */
+    border-radius: 25px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão */
+    transition: background-color 0.3s; /* Transição suave */
+    font-size: 14px; /* Tamanho da fonte reduzido */
+    font-weight: bold; /* Negrito */
+    margin-top: 10px; /* Margem acima do botão */
+}
+
+/* Efeito ao passar o mouse no botão de cadastrar */
+#register-button:hover {
+    background-color: #39FF14; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilo para a frase "Já possui login?" */
+.registration-form p {
+    margin-top: 10px; /* Margem acima */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #FFFFFF; /* Cor do texto */
+}
+
+/* Estilo do link "Clique aqui" */
+.registration-form a {
+    color: #39FF14; /* Cor do texto do link */
+    text-decoration: none; /* Remove o sublinhado */
+    cursor: pointer; /* Cursor em forma de mão */
+}
+
+.registration-form a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
