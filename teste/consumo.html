@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoboStart - Futurista</title>
+  <link rel="stylesheet" href="consumo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Barra de Navegação -->
+  <header>
+    <nav>
+      <div class="logo">RoboStart</div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li>
+            <a href="#produtos">Produtos</a>
+            <ul class="dropdown">
+                <li><a href="../inicial/geral.html">Geral</a></li>
+                <li><a href="../educacao/educacao.html">Educação</a></li>
+                <li><a href="#automacao">Pagina Teste</a></li>
+                <li><a href="#modernos">Modernos</a></li>
+            </ul>
+        </li>
+        <li><a href="./blog/blog.html">Blog</a></li>
+        <li><a href="#carrinho" id="cart-button">Carrinho</a></li>
+    </ul>
+</nav>
+<div class="section-title">
+    <div class="line-container">
+    </div>
+</div>
+</header>
+
+<section class="top-image-section">
+    <div class="top-image-content">
+        <img src="testee.png" alt="Imagem Lateral" class="top-image">
+    </div>
+</section>
+    
+    <!-- Seção principal -->
+    <main>
+        <div class="section-title">
+            <h1>Produtos Disponíveis</h1>
+        </div>
+        <section id="product-list" class="products"></section>
+    </main>
+
+    <!-- Sidebar do Carrinho -->
+    <div class="cart-overlay"></div>
+    <div class="cart-sidebar">
+        <button class="close-cart">&times;</button>
+        <h2>Carrinho</h2>
+        <div class="cart-items"></div>
+        <button class="checkout-button">Finalizar Compra</button>
+    </div>
+
+    <footer>
+        <p>© 2024 - Minha Loja</p>
+    </footer>
+
+    <script src="consumo.js"></script>
+</body>
+</html>

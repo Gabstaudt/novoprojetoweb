@@ -1,0 +1,265 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #0A0A0A;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Navegação */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #1C1C1C;
+  }
+  
+  .logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    color: #0ABAB5;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    color: #A8A9AD;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #0ABAB5;
+  }
+
+/* Título da seção */
+.section-title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Estilo do Dropdown */
+.nav-links li {
+    position: relative; /* Para posicionar o dropdown */
+  }
+  
+  .dropdown {
+    display: none; /* Esconde o dropdown por padrão */
+    position: absolute; /* Posiciona em relação ao item pai */
+    top: 100%; /* Faz o dropdown aparecer abaixo do item */
+    left: 0; /* Alinha à esquerda do item pai */
+    background-color: #1C1C1C; /* Cor de fundo do dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    z-index: 1; /* Garante que o dropdown fique acima de outros elementos */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 0; /* Espaçamento interno */
+  }
+  
+  .nav-links li:hover .dropdown {
+    display: block; /* Exibe o dropdown ao passar o mouse */
+  }
+  
+  .dropdown li {
+    padding: 10px 20px; /* Espaçamento interno dos itens do dropdown */
+  }
+  
+  .dropdown li a {
+    color: #A8A9AD; /* Cor do texto padrão */
+    text-decoration: none; /* Remove sublinhado */
+    display: block; /* Faz com que o link ocupe a largura total */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para a cor de fundo e texto */
+  }
+  
+  .dropdown li a:hover {
+    background-color: transparent; /* Mantém o fundo transparente */
+    color: #0ABAB5; /* Cor do texto ao passar o mouse */
+  }
+  
+  .top-image-section {
+    height: 4cm; /* Altura da seção */
+    background: linear-gradient(to right, #0ABAB5,#0abab444, #000000a7); /* Gradiente do escuro para o claro */
+    display: flex; /* Usar flexbox para alinhar o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 0 20px; /* Espaçamento lateral */
+}
+
+.top-image-content {
+    display: flex; /* Flexbox para conteúdo */
+    justify-content: flex-end; /* Alinha a imagem à direita */
+    width: 100%; /* Ocupa toda a largura disponível */
+}
+
+.top-image {
+    width: auto; /* Largura automática */
+    height: 80%; /* Define uma altura proporcional */
+    max-height: 3.2cm; /* Ajusta para que não exceda o tamanho da seção */
+}
+/* Produtos */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Cartão do Produto */
+.product-card {
+    background-color: #1C1C1C;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #0ABAB5;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 1rem;
+    color: #0ABAB5;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 0.85rem;
+    color: #A8A9AD;
+    margin-bottom: 10px;
+}
+
+.product-card .preco {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.carousel-button {
+    background-color: #0ABAB5;
+    color: #0A0A0A;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.carousel-button:hover {
+    background-color: #39FF14;
+    transform: translateY(-2px);
+}
+
+.carousel-button:active {
+    transform: translateY(1px);
+}
+
+/* Carrinho */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1;
+}
+
+.cart-sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #1C1C1C;
+    color: #FFFFFF;
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.cart-sidebar.active {
+    transform: translateX(0);
+}
+
+.cart-overlay.active {
+    display: block;
+}
+
+.close-cart {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.cart-items {
+    margin-top: 60px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.checkout-button {
+    background-color: #0ABAB5;
+    color: #0A0A0A;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.checkout-button:hover {
+    background-color: #7aebff;
+    transform: translateY(-2px);
+}

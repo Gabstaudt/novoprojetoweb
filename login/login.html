@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - RoboStart</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <header>
+        <div class="logo">RoboStart</div>
+        <button id="back-button">Voltar</button>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="form-container">
+            <h2>Bem-vindo de volta!</h2>
+            <p>Faça login para continuar</p>
+
+            <!-- Formulário de Login -->
+            <form id="login-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Digite seu email" required>
+
+                <label for="password">Senha:</label>
+                <input type="password" id="password" placeholder="Digite sua senha" required>
+
+                <button type="submit" id="login-button" class="action-button">Entrar</button>
+            </form>
+
+            <div class="registration-link">
+                <p>Não possui uma conta? <a id="register-trigger">Cadastre-se aqui</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de Cadastro -->
+    <div id="register-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Cadastro</h3>
+            <form id="signup-form">
+                <label for="full-name">Nome Completo:</label>
+                <input type="text" id="full-name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email-register" required>
+                <label for="phone">Telefone:</label>
+                <input type="text" id="phone" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password-register" required>
+                <label for="confirm-password">Confirmação de Senha:</label>
+                <input type="password" id="confirm-password" required>
+                <button type="submit" id="register-button" class="action-button">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 RoboStart. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="login.js"></script>
+</body>
+</html>
