@@ -1,17 +1,15 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-  
+
 body {
     background-color: #0A0A0A;
     color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
 }
 
-/* Navegação */
 header {
     display: flex;
     justify-content: space-between;
@@ -46,164 +44,152 @@ header {
     color: #0ABAB5;
 }
 
-
-/* Seção de Imagem Superior */
-/* Seção de Imagem Superior */
 .top-image-section {
-    height: 4cm; /* Altura da seção */
-    background: linear-gradient(to right, #0ABAB5,#0abab444, #000000a7); /* Gradiente do escuro para o claro */
-    display: flex; /* Usar flexbox para alinhar o conteúdo */
-    align-items: center; /* Centraliza verticalmente */
-    padding: 0 20px; /* Espaçamento lateral */
+    height: 4cm;
+    background: linear-gradient(to right, #0ABAB5, #0abab444, #000000a7);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
 }
 
 .top-image-content {
-    display: flex; /* Flexbox para conteúdo */
-    justify-content: flex-end; /* Alinha a imagem à direita */
-    width: 100%; /* Ocupa toda a largura disponível */
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 .top-image {
-    width: auto; /* Largura automática */
-    height: 80%; /* Define uma altura proporcional */
-    max-height: 3.2cm; /* Ajusta para que não exceda o tamanho da seção */
+    width: auto;
+    height: 80%;
+    max-height: 3.2cm;
 }
 
-
-
-
-/* Estilo da seção título */
 .section-title {
-    text-align: center; /* Centraliza o texto */
-    margin: 20px 0; /* Margem para cima e para baixo */
+    text-align: center;
+    margin: 20px 0;
 }
 
 .line-container {
-    display: flex; /* Alinha os elementos em linha */
-    align-items: center; /* Alinha verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    width: 100%; /* Garante que a linha ocupe toda a largura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .neon-line {
-    flex-grow: 1; /* Faz a linha ocupar todo o espaço disponível */
-    height: 2px; /* Altura da linha (fina) */
-    background-color: #0ABAB5; /* Cor da linha */
-    margin: 0 10px; /* Margem lateral para espaçamento */
-    box-shadow: 0 0 5px #0ABAB5, 0 0 10px #0ABAB5, 0 0 15px #39FF14, 0 0 20px #39FF14; /* Efeito de brilho neon */
+    flex-grow: 1;
+    height: 2px;
+    background-color: #0ABAB5;
+    margin: 0 10px;
+    box-shadow: 0 0 5px #0ABAB5, 0 0 10px #0ABAB5, 0 0 15px #39FF14, 0 0 20px #39FF14;
 }
 
 .line-container h2 {
-    font-size: 24px; /* Tamanho da fonte */
-    color: #FFFFFF; /* Cor do texto */
-    white-space: nowrap; /* Impede quebra de linha */
-    margin: 0; /* Remove margens padrão */
-    padding: 0 10px; /* Espaço ao redor do texto */
+    font-size: 24px;
+    color: #FFFFFF;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0 10px;
 }
 
-/* Estilo da seção de produtos */
 .products {
-    display: flex; /* Usar flexbox para layout */
-    flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha */
-    justify-content: center; /* Centraliza os cards */
-    padding: 20px; /* Espaçamento em torno dos produtos */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
 }
 
 .product-card {
-    background-color: #1C1C1C; /* Cor de fundo dos cards */
-    border-radius: 10px; /* Bordas arredondadas */
-    padding: 20px; /* Espaçamento interno */
-    margin: 15px; /* Margem entre os cards */
-    text-align: center; /* Centraliza o texto */
-    width: 200px; /* Largura do card */
-    transition: transform 0.3s; /* Transição suave para o efeito de hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    background-color: #1C1C1C;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .product-card:hover {
-    transform: translateY(-5px); /* Efeito de levitar ao passar o mouse */
+    transform: translateY(-5px);
 }
 
 .product-card img {
-    width: 100%; /* A imagem ocupa toda a largura do card */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 8px; /* Bordas arredondadas para a imagem */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .product-card h3 {
-    color: #FFFFFF; /* Cor do título */
-    font-size: 16px; /* Tamanho da fonte do título */
-    margin-bottom: 10px; /* Margem inferior */
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .product-card p {
-    font-size: 14px; /* Tamanho da fonte da descrição */
-    color: #A8A9AD; /* Cor da descrição */
+    font-size: 14px;
+    color: #A8A9AD;
 }
 
 .preco {
-    font-weight: bold; /* Negrito */
-    color: #0ABAB5; /* Cor do preço */
-    margin: 10px 0; /* Margem em cima e embaixo */
+    font-weight: bold;
+    color: #0ABAB5;
+    margin: 10px 0;
 }
 
-/* Estilo dos Botões Adicionar ao Carrinho */
 .carousel-button {
-    background-color: #0ABAB5; /* Cor de fundo */
-    color: #0A0A0A; /* Cor do texto */
-    border: none; /* Sem borda */
-    padding: 10px 20px; /* Espaçamento interno */
-    border-radius: 25px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor em forma de mão */
-    font-size: 16px; /* Tamanho da fonte */
-    font-weight: bold; /* Negrito */
-    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    background-color: #0ABAB5;
+    color: #0A0A0A;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-button:hover {
-    background-color: #39FF14; /* Cor do botão ao passar o mouse */
+    background-color: #39FF14;
 }
 
-/* Estilo do Dropdown */
 .nav-links li {
-    position: relative; /* Para posicionar o dropdown */
+    position: relative;
 }
 
 .dropdown {
-    display: none; /* Esconde o dropdown por padrão */
-    position: absolute; /* Posiciona em relação ao item pai */
-    top: 100%; /* Faz o dropdown aparecer abaixo do item */
-    left: 0; /* Alinha à esquerda do item pai */
-    background-color: #1C1C1C; /* Cor de fundo do dropdown */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
-    z-index: 1; /* Garante que o dropdown fique acima de outros elementos */
-    border-radius: 5px; /* Bordas arredondadas */
-    padding: 10px 0; /* Espaçamento interno */
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1C1C1C;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    padding: 10px 0;
 }
 
 .nav-links li:hover .dropdown {
-    display: block; /* Exibe o dropdown ao passar o mouse */
+    display: block;
 }
 
 .dropdown li {
-    padding: 10px 20px; /* Espaçamento interno dos itens do dropdown */
+    padding: 10px 20px;
 }
 
 .dropdown li a {
-    color: #A8A9AD; /* Cor do texto padrão */
-    text-decoration: none; /* Remove sublinhado */
-    display: block; /* Faz com que o link ocupe a largura total */
-    transition: background-color 0.3s, color 0.3s; /* Transição suave para a cor de fundo e texto */
+    color: #A8A9AD;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .dropdown li a:hover {
-    background-color: transparent; /* Mantém o fundo transparente */
-    color: #0ABAB5; /* Cor do texto ao passar o mouse */
+    background-color: transparent;
+    color: #0ABAB5;
 }
- /* sidebar carrinho */
 
- /* Estilo da Sidebar do Carrinho */
 .cart-overlay {
     position: fixed;
     top: 0;
@@ -211,8 +197,8 @@ header {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    display: none; /* Inicialmente escondido */
-    z-index: 10; /* Colocado acima do conteúdo */
+    display: none;
+    z-index: 10;
 }
 
 .cart-sidebar {
@@ -221,20 +207,20 @@ header {
     top: 0;
     width: 300px;
     height: 100%;
-    background-color: #1C1C1C; /* Cor do fundo */
-    color: #FFFFFF; /* Cor do texto */
+    background-color: #1C1C1C;
+    color: #FFFFFF;
     padding: 20px;
-    transform: translateX(100%); /* Inicialmente fora da tela */
-    transition: transform 0.3s ease-in-out; /* Animação */
-    z-index: 11; /* Acima da overlay */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 11;
 }
 
 .cart-sidebar.active {
-    transform: translateX(0); /* Move para dentro da tela */
+    transform: translateX(0);
 }
 
 .cart-items {
-    margin-top: 20px; /* Espaçamento acima da lista de itens */
+    margin-top: 20px;
 }
 
 .close-cart {
@@ -249,22 +235,21 @@ header {
 }
 
 #checkout-btn {
-    background-color: #0ABAB5; /* Cor do botão */
-    color: #0A0A0A; /* Cor do texto do botão */
-    border: none; /* Sem borda */
-    padding: 10px; /* Espaçamento interno */
-    width: 100%; /* O botão ocupa a largura total do carrinho */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor em forma de mão */
-    transition: background-color 0.3s; /* Transição suave */
-    margin-top: 10px; /* Margem acima do botão */
+    background-color: #0ABAB5;
+    color: #0A0A0A;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
 }
 
 #checkout-btn:hover {
-    background-color: #39FF14; /* Cor do botão ao passar o mouse */
+    background-color: #39FF14;
 }
 
-/* Itens do Carrinho */
 .cart-items {
     margin-top: 60px;
 }
@@ -273,60 +258,58 @@ header {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
-    border-radius: 10px; /* Bordas arredondadas */
+    border-radius: 10px;
 }
 
 .cart-item img {
-    width: 50px; /* Imagem menor */
-    height: 50px; /* Imagem menor */
+    width: 50px;
+    height: 50px;
     border-radius: 5px;
     margin-right: 10px;
 }
 
 .item-info {
-    flex-grow: 1; /* Faz com que o espaço do item cresça */
+    flex-grow: 1;
 }
 
-/* Estilo do Campo de Quantidade */
 .cart-item input {
-    width: 50px; /* Largura do input */
-    height: 30px; /* Altura do input */
-    border: 2px solid #0ABAB5; /* Borda azul neon */
-    border-radius: 5px; /* Bordas arredondadas */
-    text-align: center; /* Centraliza o texto */
-    background-color: #1C1C1C; /* Fundo do input */
-    color: #FFFFFF; /* Cor do texto */
-    margin-left: 10px; /* Espaço à esquerda do input */
+    width: 50px;
+    height: 30px;
+    border: 2px solid #0ABAB5;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #1C1C1C;
+    color: #FFFFFF;
+    margin-left: 10px;
 }
 
 .cart-item input:focus {
-    outline: none; /* Remove o contorno */
-    border-color: #00eeff; /* Muda a borda ao focar */
+    outline: none;
+    border-color: #00eeff;
 }
 
-/* Estilo do Botão de Finalizar Compra */
 .checkout-button {
-    background-color: #0ABAB5; /* Cor de fundo */
-    color: #0A0A0A; /* Cor do texto */
+    background-color: #0ABAB5;
+    color: #0A0A0A;
     border: none;
-    padding: 12px; /* Ajusta o padding */
+    padding: 12px;
     width: 100%;
-    border-radius: 10px; /* Bordas arredondadas */
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 18px; /* Aumenta o tamanho da fonte */
-    font-weight: bold; /* Negrito */
-    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .checkout-button:hover {
-    background-color: #7aebff; /* Cor ao passar o mouse */
-    transform: translateY(-2px); /* Efeito de levitar ao passar o mouse */
+    background-color: #7aebff;
+    transform: translateY(-2px);
 }
 
 .checkout-button:active {
-    transform: translateY(1px); /* Efeito de pressionar */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reduzida ao pressionar */
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

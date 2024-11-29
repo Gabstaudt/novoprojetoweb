@@ -1,159 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RoboStart - Futurista</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Privilegios</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link para o mesmo CSS das demais páginas -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Biblioteca para gráficos -->
 </head>
 <body>
-  <!-- Barra de Navegação -->
-  <header>
-    <nav>
-      <div class="logo">RoboStart</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li>
-            <a href="#produtos">Produtos</a>
-            <ul class="dropdown">
-                <li><a href="./inicial/geral.html">Geral</a></li>
-                <li><a href="#infantil">Infantil</a></li>
-                <li><a href="#automacao">Automação</a></li>
-                <li><a href="#modernos">Modernos</a></li>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Admin Dashboard</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="privilegio.html" class="active">Privilegio</a></li>
+                <li><a href="#" onclick="logout()">Sair</a></li>
             </ul>
-        </li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#carrinho" id="cart-button">Carrinho</a></li>
-    </ul>
-</nav>
-<div class="section-title">
-    <div class="line-container">
-        <h2>Home</h2>
-    </div>
-</div>
-</header>
+        </nav>
+    </header>
 
-  <!-- Seção Principal -->
-  <main>
-    <section class="banner">
-      <div class="central-image">
-        <img src="./image/image.png" alt="Banner Central" class="main-banner-img">
-        <div class="product-card-overlay">
-          <div class="card" style="opacity: 0.8;">
-            <img src="./image/produtos/aranha.png" alt="Produto 1">
-            <p>Aranha</p>
-          </div>
-          <div class="card" style="opacity: 0.8;">
-            <img src="./image/produtos/braco.png" alt="Produto 2">
-            <p>Braço</p>
-          </div>
-        </div>
-        <div class="sidebar">
-          <button class="filled-button">Compre agora</button>
-          <button class="outline-button">Sobre nós</button>
-        </div>
-      </div>
+    <main>
+        <section class="admin-section">
+            <h2>Bem-vindo, Administrador</h2>
+            <p>Gerencie as operações do site aqui.</p>
 
-      <div class="section-title">
-        <div class="line-container">
-            <div class="neon-line"></div>
-            <h2>Home</h2>
-            <div class="neon-line"></div>
-        </div>
-    </div>
-
-    </section>
-
-    <!-- Carrossel de Produtos -->
-    <section class="products" id="produtos">
-      <div class="carousel-container">
-        <button class="carousel-button left" id="prevButton">&#9664;</button>
-        <div class="product-carousel" id="product-carousel">
-
-                    <div class="product-card">
-                <img src="./image/produtos/drone.png" alt="Produto 1" data-image="drone.png">
-                <h3>Kit de Drone Programável</h3>
-                <p>Kit educacional DIY de drone para o BBC micro:bit que você constrói, codifica e depois voa.</p>
-                <div class="preco">Preço: R$300,00</div>
-                <button class="carousel-button" onclick="addToCart('Kit de Drone Programável', 300, 'drone.png')">Adicionar ao Carrinho 🛒</button>
-                <div class="avaliacao">★★★★★</div>
+            <!-- Gráficos -->
+            <div class="dashboard">
+                <div class="chart-container">
+                    <canvas id="salesChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="revenueChart"></canvas>
+                </div>
             </div>
 
+            <!-- Compras Feitas -->
+            <section class="admin-table">
+                <h3>Compras Recentes</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Compra</th>
+                            <th>Cliente</th>
+                            <th>Produto</th>
+                            <th>Quantidade</th>
+                            <th>Total</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody id="purchase-table">
+                        <!-- Dados serão preenchidos dinamicamente -->
+                    </tbody>
+                </table>
+            </section>
 
-          <div class="product-card">
-            <img src="./image/produtos/carrinho.png" alt="Produto 2">
-            <h3>Kit Carrinho</h3>
-            <p>Construa e programe seu próprio carrinho robô com este kit.</p>
-            <div class="preco">Preço: R$250,00</div>
-            <button class="carousel-button" onclick="addToCart('Kit Carrinho', 250, 'carrinho.png')">Adicionar ao Carrinho 🛒</button>
-            <div class="avaliacao">★★★★☆</div>
-          </div>
-          <div class="product-card">
-            <img src="./image/produtos/robo.png" alt="Produto 3">
-            <h3>Kit Robô</h3>
-            <p>Aprenda a programar um robô com este kit educativo.</p>
-            <div class="preco">Preço: R$350,00</div>
-            <button class="carousel-button" onclick="addToCart('Kit Robô', 350, 'robo.png')">Adicionar ao Carrinho 🛒</button>
-            <div class="avaliacao">★★★★★</div>
-          </div>
-          <div class="product-card">
-            <img src="./image/produtos/aranha.png" alt="Produto 4">
-            <h3>Kit Aranha</h3>
-            <p>Monte e programe sua própria aranha robô.</p>
-            <div class="preco">Preço: R$150,00</div>
-            <button class="carousel-button" onclick="addToCart('Kit Aranha', 150, 'aranha.png')">Adicionar ao Carrinho 🛒</button>
-            <div class="avaliacao">★★★★☆</div>
-          </div>
-          <div class="product-card">
-            <img src="./image/produtos/braco.png" alt="Produto 5">
-            <h3>Kit Braço Robótico</h3>
-            <p>Construa um braço robótico programável.</p>
-            <div class="preco">Preço: R$400,00</div>
-            <button class="carousel-button" onclick="addToCart('Kit Braço Robótico', 400, 'braco.png')">Adicionar ao Carrinho 🛒</button>
-            <div class="avaliacao">★★★★★</div>
-          </div>
+            <!-- Adicionar Produto -->
+            <section class="add-product">
+                <h3>Adicionar Produto</h3>
+                <form id="add-product-form">
+                    <div class="form-group">
+                        <label for="product-name">Nome do Produto</label>
+                        <input type="text" id="product-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-price">Preço</label>
+                        <input type="number" id="product-price" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-image">Imagem (URL)</label>
+                        <input type="text" id="product-image" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Adicionar Produto</button>
+                    </div>
+                </form>
+            </section>
+        </section>
+    </main>
 
-          <div class="product-card">
-            <img src="./image/produtos/braco.png" alt="Produto 5">
-            <h3>Kit Braço Robótico</h3>
-            <p>Construa um braço robótico programável.</p>
-            <div class="preco">Preço: R$400,00</div>
-            <button class="carousel-button" onclick="addToCart('Kit Braço Robótico', 400, 'braco.png')">Adicionar ao Carrinho 🛒</button>
-            <div class="avaliacao">★★★★★</div>
-          </div>
+    <footer>
+        <p>&copy; 2024 - Seu Site</p>
+    </footer>
 
-          <div class="product-card">
-            <img src="./image/produtos/braco.png" alt="Produto 5">
-            <h3>Kit Braço Robótico</h3>
-            <p>Construa um braço robótico programável.</p>
-            <div class="preco">Preço: R$400,00</div>
-            <button class="carousel-button" onclick="addToCart('Kit Braço Robótico', 400)">Adicionar ao Carrinho 🛒</button>
-            <div class="avaliacao">★★★★★</div>
-          </div>
-        </div>
-        <button class="carousel-button right" id="nextButton">&#9654;</button>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2024 RoboStart. Todos os direitos reservados.</p>
-  </footer>
-
-<!-- Sidebar do Carrinho -->
-<div class="cart-overlay" id="cart-overlay"></div>
-<div class="cart-sidebar" id="cart-sidebar">
-    <button class="close-cart" id="close-cart">X</button>
-    <h2>Carrinho de Compras</h2>
-    <div id="cart-items">
-        <!-- Os itens do carrinho serão inseridos aqui dinamicamente através do JavaScript -->
-    </div>
-    <div>Total: R$<span id="total-value">0.00</span></div>
-    <button class="checkout-button" id="checkout-btn">Finalizar Compra</button>
-</div>
-
-  <!-- JavaScript -->
-  <script src="script.js"></script>
+    <script src="admin.js"></script> <!-- Arquivo para lógica dinâmica -->
 </body>
 </html>

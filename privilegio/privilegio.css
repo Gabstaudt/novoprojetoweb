@@ -1,0 +1,86 @@
+header {
+    background: #4CAF50;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    color: white;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+.admin-section {
+    padding: 2em;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.chart-container {
+    width: 45%;
+}
+
+.admin-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+.admin-table th, .admin-table td {
+    border: 1px solid #ddd;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.admin-table th {
+    background: #4CAF50;
+    color: white;
+}
+
+.add-product .form-group {
+    margin-bottom: 1em;
+}
+
+.add-product label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.add-product input, .add-product button {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+.add-product button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.add-product button:hover {
+    background: #45a049;
+}
