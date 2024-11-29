@@ -81,14 +81,20 @@ loginForm.addEventListener("submit", async (event) => {
         // Exibe mensagem de erro ao usuário
         alert(result.error);
     } else {
-        // Armazena o token no localStorage (ou sessionStorage, conforme a necessidade)
+        
         localStorage.setItem("authToken", result.token);
+        localStorage.setItem("user", JSON.stringify(result.user)); 
         alert("Login realizado com sucesso!");
 
-        // Redireciona para a página de sucesso
-        window.location.href = "sucesso.html";
+        // Verifica o privilégio do usuário
+        if (result.user.privilegio === "admin") {
+            window.location.href = "privilegio.html"; 
+        } else {
+            window.location.href = "sucesso.html"; 
+        }
     }
 });
+
 
 // Carrega o carrinho do localStorage
 let cart = JSON.parse(localStorage.getItem('carrinho')) || [];
