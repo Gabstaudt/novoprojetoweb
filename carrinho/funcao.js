@@ -89,7 +89,7 @@ loginForm.addEventListener("submit", async (event) => {
 
         // Verifica o privilégio do usuário
         if (result.user.privilegio === "admin") {
-            window.location.href = "privilegio.html"; 
+            window.location.href = "../privilegio/privilegio.html"; 
         } else {
             window.location.href = "sucesso.html"; 
         }
