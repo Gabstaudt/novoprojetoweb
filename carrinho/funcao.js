@@ -1,5 +1,6 @@
 const API_URL = "http://localhost:3000"; // URL base do backend
 
+
 // Elementos HTML
 const output = document.getElementById("output");
 const viewUsersButton = document.getElementById("view-users");

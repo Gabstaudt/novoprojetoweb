@@ -1,4 +1,3 @@
-
 let cart = JSON.parse(localStorage.getItem('carrinho')) || []; // Carrega o carrinho ou inicializa vazio
 let cartCount = cart.reduce((count, item) => count + item.quantity, 0); // Conta a quantidade total de itens
 
@@ -31,7 +30,7 @@ function updateCart() {
         totalValue += item.price * item.quantity; // Calcula o total
         cartItems.innerHTML += `
             <div class="cart-item">
-                <img src="${item.image}" alt="${item.name}"> 
+                <img src="./imgeduca/${item.image}" alt="${item.name}"> <!-- Corrige o caminho da imagem -->
                 <div class="item-info">
                     <p>${item.name}</p>
                     <p>R$${item.price.toFixed(2)}</p>
@@ -43,6 +42,7 @@ function updateCart() {
 
     document.getElementById('total-value').textContent = totalValue.toFixed(2); // Atualiza o total no carrinho
 }
+
 function updateLocalStorage() {
     localStorage.setItem('carrinho', JSON.stringify(cart)); // Salva o carrinho como string no Local Storage
 }

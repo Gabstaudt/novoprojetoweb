@@ -1,5 +1,6 @@
-let cart = [];  
-let cartCount = 0; 
+
+let cart = JSON.parse(localStorage.getItem('carrinho')) || []; // Carrega o carrinho ou inicializa vazio
+let cartCount = cart.reduce((count, item) => count + item.quantity, 0); // Conta a quantidade total de itens
 
 // Abre o carrinho e a sobreposição
 document.getElementById('cart-button').addEventListener('click', function() {
@@ -56,6 +57,7 @@ function updateCart() {
 
     document.getElementById('total-value').textContent = totalValue.toFixed(2);
 }
+
 
 
 // Atualiza a quantidade de produtos

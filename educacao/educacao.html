@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RoboStart - Futurista</title>
-    <link rel="stylesheet" href="geral.css">
+    <link rel="stylesheet" href="educacao.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -17,8 +17,8 @@
         <li>
             <a href="#produtos">Produtos</a>
             <ul class="dropdown">
-                <li><a href="geral.html">Geral</a></li>
-                <li><a href="../educacao/educacao.html">Educação</a></li>
+                <li><a href="../inicial/geral.html">Geral</a></li>
+                <li><a href="./educacao.html">Educação</a></li>
                 <li><a href="#automacao">Automação</a></li>
                 <li><a href="#modernos">Modernos</a></li>
             </ul>
@@ -40,7 +40,7 @@
 <!-- Seção de Imagem Superior -->
 <section class="top-image-section">
     <div class="top-image-content">
-        <img src="./imagens/edit.png" alt="Imagem Lateral" class="top-image">
+        <img src="./imgeduca/bannerrobo.png" alt="Imagem Lateral" class="top-image">
     </div>
 </section>
 
@@ -48,11 +48,12 @@
 <main>
     <section class="products">
         <div class="product-card">
-            <img src="../image/produtos/drone.png" alt="Drone">
-            <h3>Kit de Drone Programável</h3>
-            <p>Kit educacional DIY de drone para o BBC micro:bit que você constrói, codifica e depois voa.</p>
-            <div class="preco">Preço: R$300,00</div>
-            <button class="carousel-button" onclick="addToCart('Kit de Drone Programável', 300, '../image/produtos/drone.png')">Adicionar ao Carrinho 🛒</button>
+            <img src="./imgeduca/prod1.png" alt="Drone">
+            <h3>Cubo educacional</h3>
+            <p>Um robô de madeira 2WD amigável, acompanhado de um programador que introduz os fundamentos da programação de forma divertida. 
+                Com uma aventura emocionante e atividades práticas, seu pequeno poderá explorar o mundo da tecnologia enquanto brinca!</p>
+            <div class="preco">Preço: R$199,90</div>
+            <button class="carousel-button" onclick="addToCart('Cubo educacional', 199.90, 'prod1.png')">Adicionar ao Carrinho 🛒</button>
         </div>
 
         <div class="product-card">
@@ -60,7 +61,7 @@
             <h3>Kit Carrinho</h3>
             <p>Construa e programe seu próprio carrinho robô com este kit.</p>
             <div class="preco">Preço: R$250,00</div>
-            <button class="carousel-button" onclick="addToCart('Kit Carrinho', 250, '../image/produtos/carrinho.png')">Adicionar ao Carrinho 🛒</button>
+            <button class="carousel-button" onclick="addToCart('Kit Carrinho', 250, 'carrinho.png')">Adicionar ao Carrinho 🛒</button>
         </div>
 
         <div class="product-card">
@@ -68,14 +69,14 @@
             <h3>Kit Robô</h3>
             <p>Aprenda a programar um robô com este kit educativo.</p>
             <div class="preco">Preço: R$350,00</div>
-            <button class="carousel-button" onclick="addToCart('Kit Robô', 350, '../image/produtos/robo.png')">Adicionar ao Carrinho 🛒</button>
+            <button class="carousel-button" onclick="addToCart('Kit Robô', 350, 'robo.png')">Adicionar ao Carrinho 🛒</button>
         </div>
         <div class="product-card">
             <img src="../image/produtos/aranha.png" alt="Aranha">
             <h3>Kit Aranha</h3>
             <p>Monte e programe sua própria aranha robô.</p>
             <div class="preco">Preço: R$150,00</div>
-            <button class="carousel-button" onclick="addToCart('Kit Aranha', 150, '../image/produtos/aranha.png')">Adicionar ao Carrinho 🛒</button>
+            <button class="carousel-button" onclick="addToCart('Kit Aranha', 150, 'aranha.png')">Adicionar ao Carrinho 🛒</button>
         </div>
 
         <div class="product-card">
@@ -103,6 +104,6 @@
     <p>&copy; 2024 RoboStart. Todos os direitos reservados.</p>
 </footer>
 
-<script src="geral.js"></script> <!-- Link para o JavaScript -->
+<script src="educacao.js"></script> <!-- Link para o JavaScript -->
 </body>
 </html>
