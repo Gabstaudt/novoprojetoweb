@@ -30,22 +30,6 @@ async function fetchAPI(endpoint, method = "GET", body = null) {
     }
 }
 
-function toggleModal(modal) {
-    modal.classList.toggle("hidden");
-}
-
-// Handlers de Modais
-loginTrigger.addEventListener("click", () => {
-    toggleModal(registerModal); // Fecha o modal de cadastro
-    toggleModal(loginModal); // Abre o modal de login
-});
-
-closeButtons.forEach((button) => {
-    button.addEventListener("click", (event) => {
-        const modal = event.target.closest(".modal");
-        toggleModal(modal);
-    });
-});
 
 // Lógica de Cadastro
 signupForm.addEventListener("submit", async (event) => {
@@ -66,7 +50,7 @@ signupForm.addEventListener("submit", async (event) => {
         alert(result.error);
     } else {
         alert("Usuário cadastrado com sucesso!");
-        window.location.href = "sucesso.html";
+        window.location.href = "../sucesso/sucesso.html";
     }
 });
 
@@ -82,19 +66,24 @@ loginForm.addEventListener("submit", async (event) => {
         // Exibe mensagem de erro ao usuário
         alert(result.error);
     } else {
-        
+        // Armazena o token e os dados do usuário no localStorage
         localStorage.setItem("authToken", result.token);
-        localStorage.setItem("user", JSON.stringify(result.user)); 
+        localStorage.setItem("user", JSON.stringify(result.user));
+
         alert("Login realizado com sucesso!");
 
-        // Verifica o privilégio do usuário
+    
+
+        // Verifica o privilégio do usuário e redireciona
         if (result.user.privilegio === "admin") {
-            window.location.href = "../privilegio/privilegio.html"; 
+            window.location.href = "../privilegio/privilegio.html"; // Redireciona para a página de admin
         } else {
-            window.location.href = "sucesso.html"; 
+            // Exibe o botão de finalizar compra para usuários comuns
+            document.getElementById("finalize-purchase-button").classList.remove("hidden");
         }
     }
 });
+
 
 
 // Carrega o carrinho do localStorage
@@ -103,7 +92,7 @@ let cart = JSON.parse(localStorage.getItem('carrinho')) || [];
 // Função para exibir os itens do carrinho
 function displayCartItems() {
     const cartItemsContainer = document.getElementById('cart-items');
-    cartItemsContainer.innerHTML = ''; // Limpa os itens do carrinho
+    cartItemsContainer.innerHTML = ''; 
 
     let totalValue = 0; // Inicializa o total
 
@@ -190,33 +179,64 @@ registerTrigger.addEventListener('click', () => {
     modal.classList.add('show');
 });
 
-// Fecha o modal de cadastro ao clicar no "X"
-closeModal.addEventListener('click', () => {
-    modal.classList.remove('show');
-});
+// // Fecha o modal de cadastro ao clicar no "X"
+// closeModal.addEventListener('click', () => {
+//     modal.classList.remove('show');
+// });
 
-// Fecha o modal de cadastro ao clicar fora do conteúdo do modal
-window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        modal.classList.remove('show');
-    }
-});
+// // Fecha o modal de cadastro ao clicar fora do conteúdo do modal
+// window.addEventListener('click', (e) => {
+//     if (e.target === modal) {
+//         modal.classList.remove('show');
+//     }
+// });
 
 
 // Abre o modal de login ao clicar em "Já tem login?"
 loginTrigger.addEventListener('click', () => {
     modal.classList.remove('show'); // Fecha o modal de cadastro
     loginModal.classList.add('show'); // Abre o modal de login
+    
 });
+
+// // // Fecha o modal de login ao clicar no "X"
+// // closeLoginModal.addEventListener('click', () => {
+// //     loginModal.classList.remove('show');
+// // });
+
+// // // Fecha o modal de login ao clicar fora do conteúdo do modal
+// // window.addEventListener('click', (e) => {
+// //     if (e.target === loginModal) {
+// //         loginModal.classList.remove('show');
+// //     }
+// // });
+
+
+
+const closeLoginModal = document.getElementById("close-login-modal");
 
 // Fecha o modal de login ao clicar no "X"
-closeLoginModal.addEventListener('click', () => {
-    loginModal.classList.remove('show');
+closeLoginModal.addEventListener("click", () => {
+    loginModal.classList.remove("show");
 });
+// const finalizePurchaseButton = document.getElementById("finalize-purchase-button");
 
-// Fecha o modal de login ao clicar fora do conteúdo do modal
-window.addEventListener('click', (e) => {
-    if (e.target === loginModal) {
-        loginModal.classList.remove('show');
+// finalizePurchaseButton.addEventListener("click", () => {
+//     if (cart.length > 0) {
+//         // Redireciona para sucesso.html
+//         window.location.href = "../sucesso/sucesso.html";
+//     } else {
+//         alert("Seu carrinho está vazio!");
+//     }
+// });
+const finalizePurchaseButton = document.getElementById("finalize-purchase-button");
+
+// Adiciona evento de clique no botão "Finalizar Compra"
+finalizePurchaseButton.addEventListener("click", () => {
+    if (cart.length > 0) { // Verifica se há itens no carrinho
+        alert("Compra finalizada com sucesso!"); // Mensagem de sucesso (opcional)
+        window.location.href = "../sucesso/sucesso.html"; // Redireciona para a página de sucesso
+    } else {
+        alert("Seu carrinho está vazio! Adicione itens antes de finalizar a compra."); // Alerta se o carrinho estiver vazio
     }
 });

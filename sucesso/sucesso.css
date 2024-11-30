@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+#tracking-code {
+    font-weight: bold;
+    color: #333;
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.progress-container {
+    margin: 30px 0;
+}
+
+.progress-bar {
+    position: relative;
+    height: 8px;
+    background: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: #4CAF50;
+    transition: width 0.5s ease-in-out;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.step.active {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.step::before {
+    content: "•";
+    color: #ddd;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto 5px auto;
+}
+
+.step.active::before {
+    color: #4CAF50;
+}
+
+button {
+    background: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+

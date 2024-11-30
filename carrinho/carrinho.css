@@ -149,7 +149,7 @@ header {
 
 /* Ocultar elementos com a classe 'hidden' */
 .hidden {
-    display: none; /* Oculta elementos */
+    display: none;
 }
 
 /* Estilo do botão de finalizar compra */
